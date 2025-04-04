@@ -15,9 +15,39 @@ return {
   },
   opts = {
     filesystem = {
+      show_hidden = true,
       window = {
         mappings = {
           ['\\'] = 'close_window',
+          ['o'] = 'open',
+          ['v'] = 'open_vsplit',
+          ['s'] = 'open_split',
+          ['.'] = 'toggle_hidden',
+        },
+      },
+    },
+    use_libuv_file_watcher = true,
+    enable_git_status = true,
+    enable_diagnostics = true,
+    default_component_configs = {
+      icon = {
+        enable = true,
+        name = 'nvim-web-devicons',
+        color = 'guifg',
+      },
+      modified = {
+        symbol = '[+]',
+      },
+      git_status = {
+        symbols = {
+          -- Change symbols accordingly, see git status section.
+          unstaged = '!',
+          staged = '+',
+          unmerged = 'conflict!',
+          renamed = 'renamed',
+          untracked = 'untracked',
+          deleted = 'deleted',
+          ignored = 'ignored',
         },
       },
     },
