@@ -201,6 +201,13 @@ vim.keymap.set('n', '<leader>Th', function()
   vim.cmd.startinsert() -- Enter insert mode immediately
 end, { desc = 'Open horizontal terminal' })
 
+-- Keybinding for vertical terminal split
+vim.keymap.set('n', '<leader>Tv', function()
+  vim.cmd.vsplit() -- Create vertical split
+  vim.cmd.term() -- Open terminal
+  vim.cmd.startinsert() -- Enter insert mode
+end, { desc = 'Open vertical terminal' })
+
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
@@ -468,6 +475,7 @@ require('lazy').setup({
         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
           winblend = 10,
           previewer = true,
+          enable_preview = true,
         })
       end, { desc = '[/] Fuzzily search in current buffer' })
 
