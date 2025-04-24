@@ -97,6 +97,8 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+vim.opt.laststatus = 3
+
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -105,6 +107,9 @@ vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
+
+-- Make vertical splits more visible using a bolder character
+vim.opt.fillchars = { vert = '|', horiz = '-' }
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
@@ -717,6 +722,7 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {},
         --
+        marksman = {},
 
         lua_ls = {
           -- cmd = { ... },
