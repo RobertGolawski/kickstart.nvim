@@ -962,51 +962,23 @@ require('lazy').setup({
       vim.g.sonokai_transparent_background = 1
       vim.cmd.colorscheme 'sonokai'
       vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'none' })
-      vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = 'none' }) -- Non-current window status line
+      vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = 'none' })
 
-      -- Floating windows (used by Telescope, LSP hover, which-key, etc.)
       vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none', fg = '#6A6A6A' })
-      -- For float borders, you might want to keep the foreground color
-      -- local float_border_hl = vim.api.nvim_get_hl(0, { name = 'FloatBorder' })
+
       vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'none', fg = '#6A6A6A' })
 
-      -- Popup Menu (completion menu)
-      -- vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'PmenuSel', { bg = 'none' }) -- Selected item in Pmenu
-      -- vim.api.nvim_set_hl(0, 'PmenuSbar', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'PmenuThumb', { bg = 'none' })
-
-      -- WhichKey (if it's the popup you're referring to)
-      -- vim.api.nvim_set_hl(0, 'WhichKeyFloat', { bg = 'none' })
-      -- You might also want to target other WhichKey groups if needed:
-      -- vim.api.nvim_set_hl(0, 'WhichKey', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'WhichKeyBorder', { bg = 'none', fg = float_border_hl.fg }) -- Assuming similar border style
-      -- vim.api.nvim_set_hl(0, 'WhichKeyBorder', { fg = '#6A6A6A' })
-
-      -- Telescope specific groups (if NormalFloat isn't enough)
-      -- local telescope_border_hl = vim.api.nvim_get_hl(0, { name = 'TelescopeBorder' })
       vim.api.nvim_set_hl(0, 'TelescopeNormal', { bg = 'none' })
       vim.api.nvim_set_hl(0, 'TelescopeBorder', { bg = 'none', fg = '#6A6A6A' })
       vim.api.nvim_set_hl(0, 'TelescopePromptNormal', { bg = 'none' })
       vim.api.nvim_set_hl(0, 'TelescopeResultsNormal', { bg = 'none' })
       vim.api.nvim_set_hl(0, 'TelescopePreviewNormal', { bg = 'none' })
 
-      -- Neo-tree (if its background isn't transparent)
-      -- These were in your commented out lines and are useful if Neo-tree's sidebar isn't transparent
       vim.api.nvim_set_hl(0, 'NeoTreeNormal', { bg = 'none' })
-      vim.api.nvim_set_hl(0, 'NeoTreeNormalNC', { bg = 'none' }) -- Neo-tree in non-current window
-      vim.api.nvim_set_hl(0, 'NeoTreeEndOfBuffer', { bg = 'none' }) -- Space after the last Neo-tree entry
-      -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' })
-      --
-      -- vim.api.nvim_set_hl(0, 'NeoTreeEndOfBuffer', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'NonText', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'NeoTreeNormal', { bg = 'none' })
-      -- vim.api.nvim_set_hl(0, 'NeoTreeNormalNC', { bg = 'none' })
+      vim.api.nvim_set_hl(0, 'NeoTreeNormalNC', { bg = 'none' })
+      vim.api.nvim_set_hl(0, 'NeoTreeEndOfBuffer', { bg = 'none' })
+      vim.api.nvim_set_hl(0, 'VertSplit', { fg = '#C8C8C8', bg = 'none' })
+      vim.api.nvim_set_hl(0, 'HorizSplit', { fg = '#C8C8C8', bg = 'none' })
     end,
   },
 
