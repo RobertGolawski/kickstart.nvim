@@ -718,7 +718,7 @@ require('lazy').setup({
         gopls = {},
         cssls = {},
         zls = {},
-        -- pyright = {},
+        pyright = {},
         rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -729,6 +729,9 @@ require('lazy').setup({
         ts_ls = {},
         --
         marksman = {},
+        --
+        yamlls = {},
+        --
 
         lua_ls = {
           -- cmd = { ... },
@@ -762,6 +765,7 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -819,6 +823,17 @@ require('lazy').setup({
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        -- *** NEW: YAML ***
+        yaml = { 'prettier' },
+
+        -- Existing web‑stack formatters (you probably already have these)
+        html = { 'prettier' },
+        css = { 'prettier' },
+        scss = { 'prettier' },
+        javascript = { 'prettier' },
+        typescript = { 'prettier' },
+        vue = { 'prettier' },
+        svelte = { 'prettier' },
       },
     },
   },
